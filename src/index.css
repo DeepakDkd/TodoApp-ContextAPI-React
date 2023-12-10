@@ -4,7 +4,11 @@ body , html{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(9, 30, 68);
+  background-image: url('https://images3.alphacoders.com/108/1081008.png');
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(50px);
+
 }
 *{
   margin: 0;
@@ -14,7 +18,11 @@ body , html{
   transition: ease-in 0.1s;
 }
 .title{
-  color: aliceblue;
+  color: rgb(47, 49, 50);
+}
+h2{
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px #000000;
 }
 .App{
   width: 500px;
@@ -24,7 +32,8 @@ body , html{
   flex-direction: column;
   justify-self: start;
   align-items: center;
-  border: 2px solid white;
+  background-color: rgba(240, 248, 255, 0.274);
+  border: 2px solid rgb(2, 45, 32);
 }
 .todo-input{
   width: 100%;
@@ -57,14 +66,24 @@ body , html{
 .todo-item{
   width: 100%;
   margin: 5px 0;
-  background-color: rgb(238, 232, 232);
+  background-color: rgb(206, 202, 202);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
-
+  animation: task both 0.9s;
 }
+@keyframes task {
+  from{
+    transform: translateY(-10px);
+  }
+  to{
+    transform: translateY(0);
+  }
+  
+}
+
 .todo-item input[type="text"]{
   width: 75%;
   height: 50px;
